@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "u4lV/ABRCVraC1PSR9AhZAhnl6ax3LsOFVngDZ3JYxi9ca7sjNb9cXShm5M3QpSCm+1+6Ydf14n3EcL8BG6bjw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Terayon\\source\\repos\\ProjektAplikacjeInternetowe\\FileUploadControl\\FileUploadControl.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Terayon\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Terayon\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

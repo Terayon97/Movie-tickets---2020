@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ProjektAplikacjeInternetowe.Models.Cart>
+
+@{
+    ViewData["Title"] = "Your tickets";
+}
+
+    <h1>Your cart</h1>
+
+<form>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Seat number
+                </th>
+                <th>
+                    Date of the Movie
+                </th>
+                <th>
+                    Cost in PLN
+                </th>
+                <th>
+                    Name of the Movie
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.seatNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Amount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.movieName)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+        <input type="submit" value="Proceed to checkout" asp-action="proceed" asp-controller="Cart" />
+    </div>
+</form>

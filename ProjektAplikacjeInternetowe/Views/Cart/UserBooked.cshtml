@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ProjektAplikacjeInternetowe.Models.BookingTable>
+
+@{
+    ViewData["Title"] = "UserBooked";
+}
+
+<h1>Your tickets</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Seat number
+            </th>
+            <th>
+                Date of the Movie
+            </th>
+            <th>
+                Name of the Movie
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.seatNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateToPresent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieName)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,4 @@
+C:\Users\Terayon\source\repos\ProjektAplikacjeInternetowe\FileUploadControl\obj\Debug\netstandard2.0\FileUploadControl.csprojAssemblyReference.cache
+C:\Users\Terayon\source\repos\ProjektAplikacjeInternetowe\FileUploadControl\obj\Debug\netstandard2.0\FileUploadControl.AssemblyInfoInputs.cache
+C:\Users\Terayon\source\repos\ProjektAplikacjeInternetowe\FileUploadControl\obj\Debug\netstandard2.0\FileUploadControl.AssemblyInfo.cs
+C:\Users\Terayon\source\repos\ProjektAplikacjeInternetowe\FileUploadControl\obj\Debug\netstandard2.0\FileUploadControl.csproj.CoreCompileInputs.cache

@@ -1,0 +1,59 @@
+﻿@model ProjektAplikacjeInternetowe.Models.ViewModels.BookNowViewModel
+
+@{
+    ViewData["Title"] = "BookTicket";
+}
+
+<h1>Select your seats</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="BookTicket">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                Movie Title: 
+                @Model.Movie_Name
+                <span asp-validation-for="Movie_Name" class="text-danger"></span>
+                <input type="hidden" asp-for="Movie_Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                Date of the Movie: 
+                @Model.Movie_Date
+                <span asp-validation-for="Movie_Date" class="text-danger"></span>
+                <input type="hidden" asp-for="Movie_Date" class="form-control" />
+
+            </div>
+            <div>
+                <input type="submit" asp-action="checkSeat" asp-controller="Home" value="Check which seats are booked" frommethod="post" />
+            </div>
+            
+            <div class="form-group">
+
+                Choose your seat
+                <input asp-for="SeatNo" class="form-control" />
+                <span asp-validation-for="SeatNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <input type="hidden" asp-for="MovieId" class="form-control" />
+                <span asp-validation-for="MovieId" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Add to cart" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    @TempData["Success"]
+    @TempData["seatnomsg"]
+    <br />
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

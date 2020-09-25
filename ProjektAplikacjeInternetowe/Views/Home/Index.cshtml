@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ProjektAplikacjeInternetowe.Models.MovieDetails>
+
+@{
+    
+}
+
+<h1>Playing soon</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name of the Movie
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Date of the Movie
+            </th>
+            <th>
+                
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Movie_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Movie_Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateToPresent)
+            </td>
+            <td>
+                <img src="@item.MoviePicture" widh="100" height="100" asp-append-version="true" />
+            </td>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <td>
+                    @Html.ActionLink("Book your ticket", "BookTicket", new { id = item.Id })
+                </td>
+            }
+            else
+            {
+                <td>
+                    <p>Log in to book your ticket</p>
+                </td>
+            }
+
+        </tr>
+}
+    </tbody>
+</table>
